@@ -1,0 +1,359 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+    background-color: #34495E;
+    color: #BDC3C7
+}
+
+a{
+    text-decoration: none;
+    color: #BDC3C7
+
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    background-color: #2C3E50;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    padding: 15px 0 15px;
+    z-index: 100;
+}
+
+nav{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0.4em;
+}
+
+
+#defaultCheckBox{
+    appearance: none;
+   width: 20px;
+  height: 20px;
+  
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+  accent-color: green;
+}
+
+#defaultCheckBox:checked{
+    background-color: #2C3E50;
+  border-color: #007bff;
+}
+
+#dropMenu{
+    display:none;
+}
+
+/* #defaultCheckBox::before{
+   display: none;
+} */
+
+#defaultCheckBox::before{
+    content: "\2261";
+    color: red;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    font-size: 2.5em;
+}
+
+#defaultCheckBox:checked ~ #dropMenu{
+    list-style: none;
+    font-size: 0.7em;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+
+.burger{
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+
+
+.burger #dropMenu a{
+    padding: 3px;
+}
+
+
+
+
+
+
+
+nav .bigNav{
+    display: flex;
+    gap: 1em;
+    list-style: none;
+}
+
+nav ul li{
+    text-decoration: none;
+    
+    
+
+}
+
+nav ul li a{
+    padding: 15px;
+    border-radius: 5px;
+    transition: 0.5s;
+    font-size: 1.2em;
+}
+
+
+
+nav ul li a:hover{
+    background-color: #ECF0F1;
+    color: #2C3E50;
+}
+
+main{
+    margin-top: 20px;
+}
+
+#mainContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* padding: 30px 0 0 0; */
+}
+
+
+#heroSection{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    padding: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+#heroSection h1{
+    font-size: 5em;
+}
+
+#heroSection article{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 1200px;
+}
+
+
+
+#heroSection p{
+    font-size: 1.2em;
+    transition: 0.4s ease;
+    width: 50%;
+}
+
+#heroSection img{
+    max-width: 400px;
+    max-height: 500px;
+    margin-bottom: 0.5em;
+    border-radius: 10px;
+}
+
+#heroSection a{
+    width: max-content;
+    padding: 10px;
+    font-size: 1.3em;
+    border-radius: 10px;
+    transition: 0.5s;
+    align-self: center;
+}
+
+
+#heroSection a:hover{
+    background-color: #ECF0F1;
+    color: #2C3E50;
+}
+
+#projectsSection{
+   display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    padding: 50px;
+    justify-content: center;
+    align-items: center; 
+}
+
+#projectsSection h2{
+    font-size: 4em;
+    flex: 0 0 100%;
+}
+
+.projectsHolder{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 10px;
+    justify-content: space-around;
+}
+
+.oneProject{
+    flex: 0 0 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: 0.5s;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 10px;
+}
+
+.oneProject:hover{
+    scale: 1.03;
+}
+
+.oneProject a{
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.5s;
+    font-size: 1.2em;
+}
+
+.oneProject a:hover{
+    background-color: #ECF0F1;
+    color: #2C3E50;
+}
+
+.oneProject img{
+    max-width: 60%;
+    max-height: 300px;
+    border-radius: 10px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+
+#plansSection{
+   display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    padding: 50px;
+    justify-content: center;
+    align-items: center; 
+}
+
+#plansSection h2{
+    font-size: 4em;
+    flex: 0 0 100%;
+}
+
+
+#skillsSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#skillsSection h2{
+    font-size: 4em;
+    flex: 0 0 100%;
+}
+
+.carousel{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; 
+    overflow: hidden;
+    max-width: 600px;
+    padding: 20px 0;
+}
+
+.group{
+    display: flex;
+    will-change: transform;
+    animation: scrolling 10s linear infinite;
+    gap: 25px;
+    padding-left: 25px;
+}
+
+
+@keyframes scrolling{
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+}
+
+
+
+#skillsSection img{
+    max-width: 50px;
+    max-height: 50px;
+    display: block;
+}
+
+
+#contactSection h2{
+    font-size: 4em;
+    flex: 0 0 100%;
+}
+
+#contactSection ul{
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    justify-content: center;
+}
+
+#contactSection ul li a{
+    min-width: 30px;
+    min-height: 30px;
+    padding: 10px;
+    
+}
+
+
+footer{
+    background-color: #2C3E50;
+    text-align: center;
+    padding: 25px;
+    margin-top: 2em;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+}
+
+
+@media screen and (max-width: 768px) {
+    
+    header{
+        padding: 5px;
+    }
+
+  nav .bigNav{
+    display: none;
+  }
+
+  
+}
+
