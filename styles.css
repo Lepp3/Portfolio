@@ -1,5 +1,12 @@
 *{
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+input,
+::before,
+label{
+    -webkit-tap-highlight-color: transparent;
 }
 
 body{
@@ -36,11 +43,13 @@ header{
     display: flex;
     flex-direction: row;
     background-color: #2C3E50;
+    overflow-anchor: none;
     width: 100%;
     position: sticky;
     top: 0;
     padding: 15px 0 15px;
-    z-index: 2;
+    z-index: 888;
+    will-change: transform;
     justify-content: flex-end;
 }
 
@@ -78,11 +87,12 @@ nav{
     border-radius: 3px;
     cursor: pointer;
     position: relative;
+    accent-color: #2C3E50;
 }
 
 #defaultCheckBox:checked{
     background-color: #2C3E50;
-    border-color: #007bff;
+    border-color: #2C3E50;
 }
 
 #dropMenu{
@@ -191,7 +201,7 @@ main{
    display: flex;
     flex-direction: column;
     gap: 0.5em;
-    padding: 50px;
+    /* padding: 50px; */
     justify-content: center;
     align-items: center; 
 }
@@ -395,21 +405,23 @@ h3{
     max-width: 400px; 
 }
 
+#projectsSection{
+    scroll-margin-top: 100px;
+}
 
 .projectsHolder{
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     padding: 10px;
-    gap: 10px;
-    justify-content: space-between;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
 }
 
 .oneProject{
     display: flex;
     flex: 1;
     flex-direction: column;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 10px;
@@ -418,8 +430,21 @@ h3{
     padding: 10px;
     height: auto;
     width: auto;
+    min-width: 240px;
+    max-width: 570px;
+}
+
+.oneProject article{
+    flex: 1;
+}
+
+div.carousel{
+    min-width: 240px;
+    max-width: 360px;
 }
 
   
 }
+
+
 
