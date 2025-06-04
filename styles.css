@@ -1,3 +1,7 @@
+*{
+    scroll-behavior: smooth;
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -11,7 +15,21 @@ body{
 a{
     text-decoration: none;
     color: #BDC3C7
+}
 
+h1{
+    font-size: 5em;
+    text-align: center;
+}
+
+h2{
+    font-size: 4em;
+    text-align: center;
+}
+
+h3{
+    font-size: 2em;
+    text-align: center;
 }
 
 header{
@@ -22,63 +40,23 @@ header{
     position: sticky;
     top: 0;
     padding: 15px 0 15px;
-    z-index: 100;
+    z-index: 2;
+    justify-content: flex-end;
 }
 
 nav{
     display: flex;
-    width: 100%;
+    width: max-content;
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
-    padding: 0.4em;
+    padding: 0.4em 2em;
 }
 
-
-#defaultCheckBox{
-    appearance: none;
-   width: 20px;
-  height: 20px;
-  
-  border-radius: 3px;
-  cursor: pointer;
-  position: relative;
-  accent-color: green;
-}
-
-#defaultCheckBox:checked{
-    background-color: #2C3E50;
-  border-color: #007bff;
-}
-
-#dropMenu{
-    display:none;
-}
-
-/* #defaultCheckBox::before{
-   display: none;
-} */
-
-#defaultCheckBox::before{
-    content: "\2261";
-    color: red;
-    width: 50px;
-    height: 50px;
-    display: inline-block;
-    font-size: 2.5em;
-}
-
-#defaultCheckBox:checked ~ #dropMenu{
-    list-style: none;
-    font-size: 0.7em;
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-}
-
+/* Creating burger menu checkbox and its active state */
 
 .burger{
-    display: inline-block;
+    display: flex;
     position: relative;
     padding-left: 30px;
     cursor: pointer;
@@ -89,13 +67,31 @@ nav{
 
 .burger #dropMenu a{
     padding: 3px;
+    transition: none;
+
 }
 
+#defaultCheckBox {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
+}
 
+#defaultCheckBox:checked{
+    background-color: #2C3E50;
+    border-color: #007bff;
+}
 
+#dropMenu{
+    display:none;
+}
 
-
-
+#defaultCheckBox::before{
+   display: none;
+}
 
 nav .bigNav{
     display: flex;
@@ -105,9 +101,6 @@ nav .bigNav{
 
 nav ul li{
     text-decoration: none;
-    
-    
-
 }
 
 nav ul li a{
@@ -141,27 +134,31 @@ main{
 #heroSection{
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     gap: 0.5em;
     padding: 50px;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
 }
 
-#heroSection h1{
-    font-size: 5em;
-}
+
 
 #heroSection article{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 10px;
     padding: 10px;
-    max-width: 1200px;
+    max-width: 70%;
 }
 
-
+.imgHolder{
+    max-width: 400px;
+    max-height: 500px;
+    overflow: hidden;
+}
 
 #heroSection p{
     font-size: 1.2em;
@@ -172,7 +169,6 @@ main{
 #heroSection img{
     max-width: 400px;
     max-height: 500px;
-    margin-bottom: 0.5em;
     border-radius: 10px;
 }
 
@@ -200,10 +196,7 @@ main{
     align-items: center; 
 }
 
-#projectsSection h2{
-    font-size: 4em;
-    flex: 0 0 100%;
-}
+
 
 .projectsHolder{
     display: flex;
@@ -218,6 +211,7 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     justify-content: center;
     gap: 10px;
     transition: 0.5s;
@@ -258,10 +252,6 @@ main{
     align-items: center; 
 }
 
-#plansSection h2{
-    font-size: 4em;
-    flex: 0 0 100%;
-}
 
 
 #skillsSection{
@@ -272,10 +262,7 @@ main{
     text-align: center;
 }
 
-#skillsSection h2{
-    font-size: 4em;
-    flex: 0 0 100%;
-}
+
 
 .carousel{
     display: flex;
@@ -313,10 +300,7 @@ main{
 }
 
 
-#contactSection h2{
-    font-size: 4em;
-    flex: 0 0 100%;
-}
+
 
 #contactSection ul{
     display: flex;
@@ -344,15 +328,97 @@ footer{
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 1200px) {
     
     header{
-        padding: 5px;
+        padding: 5px ;
+        height: auto;
     }
 
   nav .bigNav{
     display: none;
   }
+
+  #defaultCheckBox::before{
+    content: "\2261";
+    color: red;
+    /* width: 50px;
+    height: 50px; */
+    display: inline-block;
+    font-size: 2.5em;
+}
+
+#defaultCheckBox:checked ~ #dropMenu{
+    list-style: none;
+    font-size: 0.7em;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin: 0;
+    padding: 5px;
+}
+
+h1{
+    font-size: 3em;
+}
+
+h2{
+    font-size: 2.5em;
+}
+
+h3{
+    font-size: 1.5em;
+}
+
+#heroSection article{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: auto;
+}
+
+
+
+.imgHolder{
+    flex: 1;
+    min-width: 150px;
+}
+
+.imgHolder img{
+    width: 100%;
+    height: auto; 
+    max-width: 400px; 
+}
+
+
+.projectsHolder{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.oneProject{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: 0.5s;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 10px;
+    height: auto;
+    width: auto;
+}
 
   
 }
